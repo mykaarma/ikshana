@@ -1,0 +1,12 @@
+select distinct backend from ( select backend from errors504 union all select backend from errors500 ) a ORDER BY a.backend
+
+
+
+
+REGEX - QA AUTOMATION
+
+Test-name:'(\S+)'
+
+Test-id:'(\S+)'
+
+QUERY : source:\/var\/log\/kaarya\/qa\-automation.log AND  "failed"
