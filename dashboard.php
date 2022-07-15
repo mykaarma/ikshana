@@ -87,6 +87,9 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		includeZero: true,
 		
     	gridThickness: 0,
+		scaleBreaks: {
+			autoCalculate: true
+		}
     	
 	},
 	axisX: {
@@ -116,7 +119,10 @@ var chart1 = new CanvasJS.Chart("chartContainer1", {
 	axisY: {
 		title: "Count Of Alert",
 		includeZero: true,
-		gridThickness: 0
+		gridThickness: 0,
+		scaleBreaks: {
+			autoCalculate: true
+		}
 	},
 	axisX: {
 		title: "Backend",
