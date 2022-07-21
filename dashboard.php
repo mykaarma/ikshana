@@ -41,9 +41,9 @@ if(!isset($_SESSION['name']))
                     </div>
                     <div class="col-sm-2">
                         <div class="profile-details">
-                            <!-- <div class="profile-image">
+                            <div class="profile-image">
                                 <img src="<?php echo $_SESSION['image'];?>" alt="profile_pic" style="width:50px;border-radius:50%;">
-                            </div> -->
+                            </div>
                             <div class="profile-name">
                                 <p><?php echo $_SESSION['name'];?></span></p>
                                
