@@ -1,117 +1,267 @@
-
-body
-{
-	background-color: #f9f9f9;
-
+body {
+    background-color: #E8EBF6!important;
 }
-section
-{
-	float:left;
-	width: 100%;
-    margin-bottom: 25px;
-    
+
+section {
+    float: left;
+    width: 100%;
 }
-.paddoff
-{
+
+.paddoff {
     padding: 0px!important;
 }
-.heading
-{
-	text-align: center;
-    font-size: 40px;
-    float: left;
-    width: 100%;
-    color: white;
-    padding: 10px 0px;
-    font-weight: bolder;
-}
 
-.sub-heading
-{
-	text-align: center;
-	font-size: 15px;
-
-}
-
-.contain-form
-{
-	width: 100%;
-	float: left;
-	padding: 40px;
-}
-.sidemenu
-{
-    background-color:#06508f;
-    height: 100vh;
-    width: 100%;
-    float: left;
-    overflow: hidden;
-}
-.menu ul
-{
-    list-style: none;
-
-}
-.menu a{
-        float: left;
-    width: 100%;
-    font-size: 20px;
-    
-
-    padding: 15px 0px;
-    text-align: center;
-}
-.menu a
-{
-    color: white;
-    text-decoration: none;
-}
-
-.menu a:hover
-{
-    color: black!important;
-     background-color: #eee;
-}
-.active
-{
+.active {
     background-color: white;
     color: black!important;
 }
-.contain-forms
-{
+
+.contain-forms {
     width: 100%;
     float: left;
-
 }
-.form-fields
-{
+
+.form-fields {
     margin: 10px 0px;
     width: 100%;
     float: left;
 }
-.contain-report
-{
+
+.contain-report {
     width: 100%;
     float: left;
 }
-.contain
-{
+
+.contain {
     width: 100%;
     float: left;
 }
-.box
-{
-    width: 100%;
+
+.box {
+    background: #E8EBF6!important;
+    height: 100%;
     float: left;
-    border: 2px solid;
-    margin: 30px 0px;
+    width: 100%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 70px;
+    left: 0;
+    background-color: #091B3E;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0s;
+}
+
+.upper-head {
+    height: 70px;
+    background: #091B3E;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    margin: 9px 0px;
+    float: left;
+    position: fixed;
+    top: 0px;
+    left: 60px;
+}
+
+.heading {
+    color: white;
+    float: left;
+    width: 100%;
     text-align: center;
+}
+
+.profile-details {
+    color: white;
+}
+
+.profile-name {
+    display: inline;
+    float: left;
+    padding: 22px 15px;
+    font-size: 19px;
+}
+
+.profile-image {
+    display: inline;
+    float: left;
+    padding: 10px 0px;
+}
+
+.canvasjs-chart-credit {
+    display: none!important;
+}
+
+.login-box {
+    margin: 150px 0px;
+    background: #7776;
+    border-radius: 25px;
+}
+
+.login-btn {
+    width: 100%;
+    float: left;
+    margin: 40px 0px;
+}
+
+.g-signin2 {
+    width: 100%;
+}
+
+.g-signin2>div {
+    margin: 0 auto;
+}
+
+.title {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.box-header {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+.box-content {
+    width: 100%;
+    float: left;
+}
+
+.toolbox {
+    width: 100%;
+    float: left;
+    background-color: white;
+    border-radius: 25px;
+    margin: 25px 0px;
+    min-height: 315px;
+    max-height: 315px;
+}
+
+.toolbox-header {
+    float: left;
+    width: 100%;
+}
+
+.toolbox-header img {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    min-height: 131px;
+    max-height: 131px;
+}
+
+.toolbox-body {
+    float: left;
+    width: 100%;
+    padding: 15px;
+}
+
+.toolbox-foot {
+    float: right;
+    width: 100%;
+    padding: 15px;
+    text-align: right;
+}
+
+.btn-primary {
+    background-color: #609BC3;
+    width: 100px;
+    display: inline;
+}
+
+.closebtn {
+    font-size: 36px;
+    color: white;
+    display: none;
+}
+
+.closebtn:hover {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.product-details {
+    margin-bottom: 60px;
+}
+
+.product-details .nav {
+    text-align: center;
+    display: block;
+    margin-bottom: 55px;
+}
+
+.product-details .nav li {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.product-details .nav li a.active {
+    border-bottom: 3px solid black;
+}
+
+.product-details .nav li a {
+    font-size: 30px;
+    background-color: transparent;
+    font-weight: 500;
+    color: #414141;
+    padding: 5px 0;
+}
+
+.fade {
+    opacity: 1!important;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.pad10 {
     padding: 10px;
 }
-.box-heading p
-{
+
+.round-border25 {
+    border-radius: 25px;
+}
+
+.tool-list {
+    float: left;
     width: 100%;
-    float: left;   
+}
+
+.tool-list li {
+    padding: 10px 0px;
     font-size: 20px;
-    font-weight: 600;
+    list-style: inside;
 }

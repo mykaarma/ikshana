@@ -1,3 +1,10 @@
+<?php session_start();
+if(!isset($_SESSION['name']))
+{
+  header('location:index.php');
+}
+
+?>
 <style>
 .sidenav {
   height: 100%;
@@ -57,10 +64,10 @@
       <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     </div>
     <div class="col-sm-8">
-       <h3>Alerting Portal</h3>
+       <h3>IKSHANA</h3>
     </div>
     <div class="col-sm-2">
-      <p>User-details</p>
+      <p><?php echo $_SESSION['name'];?></p>
     </div>
   </div>
 </section>
