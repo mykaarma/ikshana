@@ -265,3 +265,12 @@ section {
     font-size: 20px;
     list-style: inside;
 }
+
+.table-bordered
+{
+    border: 2px solid black!important;
+}
+tr,thead,td
+{
+    border: 2px solid black!important;
+}

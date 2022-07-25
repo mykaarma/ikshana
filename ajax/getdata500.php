@@ -8,41 +8,7 @@ if(isset($_POST["token"]) && password_verify("dataget", $_POST["token"]))
 	$srno=0;
 	if($backend=="all")
 	{
-		$query=$db->prepare('SELECT *,count(*) as count FROM errors500 WHERE DATE(timestamp) >= NOW() - INTERVAL ? DAY group by backend Order BY count DESC');
-		$data=array($time);
-		$execute=$query->execute($data);
-		if($execute)
-		{
-		?>
-		<div class="col-sm-4" style="overflow: scroll;">
-			<h3>Backends</h3>
-			<div class="contain-body" style="width:100%;float: left;height: 425px!important;">
-				<table class="table table-bordered table-responsive">
-					<tr>
-						<td>Sr.No</td>
-						<td>Backend</td>
- 						<td>Count</td>
-					</tr>
-					<?php
-						while($datarow=$query->fetch())
-						{ $srno++;
-						?>
-						<tr>
-						<td><?php echo $srno; ?></td>
- 						<td><?php echo $datarow['backend']; ?></td>
-						<td><?php echo $datarow['count']; ?></td>
-						</tr> 
-
-						<?php	
-						}
-					?>
-				</table>
-			</div>
-		</div>
-
-		<?php	
-
-		}
+		
 		$srno=0;
 		$query=$db->prepare('SELECT *,count(*) as count FROM errors500 WHERE DATE(timestamp) >= NOW() - INTERVAL ? DAY group by url Order BY count DESC');
 		$data=array($time);
@@ -50,7 +16,7 @@ if(isset($_POST["token"]) && password_verify("dataget", $_POST["token"]))
 		if($execute)
 		{
 		?>
-		<div class="col-sm-4" style="overflow: scroll;">
+		<div class="col-sm-6" style="overflow: scroll;">
 			<h3>Requested URL</h3>
 			<div class="contain-body" style="width:100%;float: left;height: 425px!important;">
 				<table class="table table-bordered table-responsive">
@@ -85,7 +51,7 @@ if(isset($_POST["token"]) && password_verify("dataget", $_POST["token"]))
 		if($execute)
 		{
 		?>
-		<div class="col-sm-4" style="overflow: scroll;">
+		<div class="col-sm-6" style="overflow: scroll;">
 			<h3>Source</h3>
 			<div class="contain-body" style="width:100%;float: left;height: 425px!important;">
 				<table class="table table-bordered table-responsive">
