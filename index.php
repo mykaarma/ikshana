@@ -41,7 +41,7 @@
 	</section>
 </body>
 
-<script src="https://apis.google.com/js/client:platform.js?onload=init" async defer></script>
+<!-- <script src="https://apis.google.com/js/client:platform.js?onload=init" async defer></script>
 <script>
    function init() {
         gapi.load('auth2', function() {
@@ -58,13 +58,13 @@
       var profile = googleUser.getBasicProfile();
       console.log(profile);
     }
-</script>
-<!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
+</script> -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
-  var token='<?php //echo password_hash("sessioninfo", PASSWORD_DEFAULT);?>';
+  var token='<?php echo password_hash("sessioninfo", PASSWORD_DEFAULT);?>';
  		  $.ajax(
                 {
                     type:'POST',
@@ -76,5 +76,5 @@ function onSignIn(googleUser) {
                     }
                 });
 }
-</script> -->
+</script>
 </html>
