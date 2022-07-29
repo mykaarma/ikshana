@@ -41,12 +41,30 @@
 	</section>
 </body>
 
-<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/client:platform.js?onload=init" async defer></script>
+<script>
+   function init() {
+        gapi.load('auth2', function() {
+            auth2 = gapi.auth2.init({
+                client_id: '247685355631-81gt1flv72jpkc7cb3guv5ctefiijvps.apps.googleusercontent.com',
+                cookiepolicy: 'single_host_origin',
+                scope: 'profile email'
+            });
+            element = document.getElementById('glogin');
+            auth2.attachClickHandler(element, {}, onSignUp, onFailure);
+        });
+    }
+    function onSignUp(googleUser) {
+      var profile = googleUser.getBasicProfile();
+      console.log(profile);
+    }
+</script>
+<!-- <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
 
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
-  var token='<?php echo password_hash("sessioninfo", PASSWORD_DEFAULT);?>';
+  var token='<?php //echo password_hash("sessioninfo", PASSWORD_DEFAULT);?>';
  		  $.ajax(
                 {
                     type:'POST',
@@ -58,5 +76,5 @@ function onSignIn(googleUser) {
                     }
                 });
 }
-</script>
+</script> -->
 </html>
